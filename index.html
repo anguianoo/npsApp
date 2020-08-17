@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>NPS API</title>
+<!-- Goal of app
+    The user must be able to search for parks in one or more states.
+
+    The user must be able to set the max number of results, with a default of 10.
+
+    The search must trigger a call to NPS's API.
+
+    The parks in the given state must be displayed on the page. Include at least:
+        Full name
+        Description
+        Website URL
+
+    The user must be able to make multiple searches and see only the results for the current search.
+
+    As a stretch goal, try adding the park's address to the results.
+    -->
+</head>
+<body>
+<div class="container">
+    <h1>The National Parks Services API documentation </h1>
+
+    <form id="js-form">
+        <label for="search-states">type in state acronyms</label>
+        <input type="text" name="search-states" id="js-search-states" required>
+
+        <label for="max-results">Maximum results to return</label>
+        <input type="number" name="max-results" id="js-max-results" value="10">
+
+        <input type="submit" value="Go!">
+    </form>
+
+    <p id="js-error-message" class="error-message"></p>
+    <section id="results" class="hidden">
+        <h2>Search results</h2>
+        <ul id="results-list">
+        </ul>
+    </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
